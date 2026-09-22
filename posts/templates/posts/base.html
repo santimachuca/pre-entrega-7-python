@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Cada página puede reemplazar este título. -->
+    <title>{% block titulo %}Blog de Patrick Jane{% endblock %}</title>
+
+    <!-- Django genera la dirección del archivo CSS. -->
+    <link
+        rel="stylesheet"
+        href="{% static 'posts/css/estilos.css' %}"
+    >
+</head>
+<body>
+    <header>
+        <h1>Blog de Patrick Jane</h1>
+
+        <nav>
+            <!-- Los nombres corresponden a las rutas definidas en urls.py. -->
+            <a href="{% url 'inicio' %}">Inicio</a>
+            <a href="{% url 'lista_posts' %}">Posts</a>
+            <a href="{% url 'acerca_de_mi' %}">Acerca de mí</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Cada plantilla hija coloca aquí su propio contenido. -->
+        {% block contenido %}
+        {% endblock %}
+    </main>
+</body>
+</html>

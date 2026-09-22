@@ -1,0 +1,22 @@
+{% extends "posts/base.html" %}
+
+{% block titulo %}
+Publicaciones | Blog de Patrick Jane
+{% endblock %}
+
+{% block contenido %}
+<section>
+    <h2>Publicaciones</h2>
+
+    <!-- Recorre la lista que recibiremos desde la vista. -->
+    {% for post in posts %}
+        <article>
+            <h3>{{ post.titulo }}</h3>
+            <p>{{ post.contenido }}</p>
+        </article>
+    {% empty %}
+        <!-- Se muestra si la lista no contiene publicaciones. -->
+        <p>No hay publicaciones disponibles.</p>
+    {% endfor %}
+</section>
+{% endblock %}

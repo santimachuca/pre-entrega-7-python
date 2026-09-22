@@ -1,0 +1,44 @@
+/* Estilos generales de todas las páginas. */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #252839;
+    background-color: #f4f4f4;
+}
+
+/* Encabezado principal del blog. */
+header {
+    padding: 24px;
+    color: white;
+    background-color: #252839;
+}
+
+/* Menú de navegación. */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #66d9c5;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido particular de cada página. */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+article {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #cccccc;
+}
